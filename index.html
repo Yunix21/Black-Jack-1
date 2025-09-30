@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="apple-touch-icon" href="icon.png">
+    <title>Black Jack +1</title>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Compte total en haut avec bouton reset -->
+        <div class="count-display">
+            <div class="count-header">
+                <div class="count-label">Compte Total</div>
+                <button class="reset-btn" id="resetBtn" title="Réinitialiser">🔄</button>
+            </div>
+            <div class="count-value" id="countValue">0</div>
+        </div>
+
+        <!-- Zone principale avec historique permanent et boutons -->
+        <div class="main-content">
+            <!-- Historique permanent à gauche -->
+            <div class="history-section">
+                <div class="history-header">
+                    <h3>📋 Historique</h3>
+                </div>
+                <div class="history-list" id="historyList">
+                    <div class="history-empty">Aucune action encore</div>
+                </div>
+            </div>
+
+            <!-- Zone de contrôle à droite -->
+            <div class="controls-section">
+                <!-- Boutons de contrôle principaux -->
+                <div class="controls">
+                    <button class="btn-control btn-plus" id="plusBtn">
+                        <span class="btn-sign">+</span>
+                        <span class="btn-number">1</span>
+                    </button>
+                    
+                    <button class="btn-control btn-neutral" id="neutralBtn">
+                        <span class="btn-sign">●</span>
+                        <span class="btn-number">0</span>
+                    </button>
+                    
+                    <button class="btn-control btn-minus" id="minusBtn">
+                        <span class="btn-sign">-</span>
+                        <span class="btn-number">1</span>
+                    </button>
+                </div>
+
+                <!-- Bouton Undo -->
+                <div class="undo-section">
+                    <button class="btn-undo" id="undoBtn" title="Annuler la dernière action">
+                        <span class="undo-icon">↶</span>
+                        <span class="undo-text">Annuler</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
